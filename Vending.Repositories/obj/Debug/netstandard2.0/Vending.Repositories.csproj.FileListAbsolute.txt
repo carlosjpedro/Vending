@@ -1,0 +1,11 @@
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\bin\Debug\netstandard2.0\Vending.Repositories.deps.json
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\bin\Debug\netstandard2.0\Vending.Repositories.dll
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.csprojAssemblyReference.cache
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.AssemblyInfoInputs.cache
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.AssemblyInfo.cs
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\bin\Debug\netstandard2.0\Vending.Contracts.dll
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\bin\Debug\netstandard2.0\Vending.Repositories.pdb
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\bin\Debug\netstandard2.0\Vending.Contracts.pdb
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.csproj.CopyComplete
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.dll
+C:\Users\Carlos\source\repos\Vending\Vending.Repositories\obj\Debug\netstandard2.0\Vending.Repositories.pdb

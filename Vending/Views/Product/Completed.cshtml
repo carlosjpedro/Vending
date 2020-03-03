@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Completed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model PaymentViewModel
+<h1>Completed</h1>
+<div class="container col-8">
+    <div class="row">
+        <h3>Refunded Coins:</h3>
+    </div>
+    @for (var i = 0; i < Model.Currencies.Count; i++)
+    {
+        <div class="row">
+            <div class="col-6">
+                <input type="hidden" asp-for="@Model.Currencies[i].Value" />
+                <span>@Model.Currencies[i].Value€</span>
+            </div>
+            <div class="col-6">
+                <input type="number" asp-for="@Model.Currencies[i].Count" class="form-control" />
+                <span asp-validation-for="@Model.Currencies[i].Count" class="text-danger"></span>
+            </div>
+        </div>
+
+    }
+    <div class="row"><a href="/" class="btn btn-primary">Home</a></div>
+</div>

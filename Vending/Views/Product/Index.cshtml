@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ProductSelectionViewModel
+
+<h1>Select Product</h1>
+<div class="container col-8">
+
+
+    <form asp-action="Select">
+        @foreach (var product in Model.Products)
+        {
+            <div class="row">
+                <input type="hidden" name="productId" value="@product.Id" />
+                <input type="hidden" name="workflowStepId" value="@Model.WorkflowStepId" />
+                <div class="col-6">
+                    <span>@product.Name</span>
+                </div>
+                <div class="col-3">
+                    <span>@((product.Price / 100.0m).ToString("0.00")) €</span>
+                </div>
+                <div class="col-3">
+                    <input type="submit" class="btn btn-primary" value="Select" />
+                </div>
+            </div>
+        }
+        @if (Model.ErrorMessage != null)
+        {
+            <div class="row">
+                <div class="col-12"><span class="alert alert-danger">@Model.ErrorMessage</span></div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-danger" value="Cancel" asp-action="Cancel" asp-route-stepId="@Model.WorkflowStepId">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>
+
