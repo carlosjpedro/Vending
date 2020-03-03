@@ -28,12 +28,4 @@ namespace Vending.Mapping
                     ));
         }
     }
-
-    public class ProductProfile : Profile
-    {
-        public ProductProfile()
-        {
-            CreateMap<ProductViewModel, Product>().ReverseMap();
-        }
-    }
 }

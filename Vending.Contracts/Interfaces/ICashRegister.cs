@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Vending.Contracts.Model;
 
-namespace Vending.Services
+namespace Vending.Contracts.Interfaces
 {
     public interface ICashRegister
     {

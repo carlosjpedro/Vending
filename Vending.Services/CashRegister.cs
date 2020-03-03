@@ -28,15 +28,7 @@ namespace Vending.Services
 
             foreach (var stack in orderedStacks)
             {
-                var coinCount = Math.DivRem(remainingValue, stack.Value, out var tempRemainder);
-
-                if (coinCount > stack.Count)
-                {
-                    coinCount = stack.Count;
-                    tempRemainder = remainingValue - coinCount * stack.Value;
-                }
-
-                remainingValue = tempRemainder;
+                var coinCount = ValueToCoins(stack, ref remainingValue);
 
                 change.Add(new CoinStack(stack.Value, coinCount));
 
@@ -46,6 +38,20 @@ namespace Vending.Services
             await _currencyRepository.RemoveCoins(change);
 
             return change;
+        }
+
+        private static int ValueToCoins(CoinStack stack, ref int remainder)
+        {
+            var coinCount = Math.DivRem(remainder, stack.Value, out var tempRemainder);
+
+            if (coinCount > stack.Count)
+            {
+                coinCount = stack.Count;
+                tempRemainder = remainder - coinCount * stack.Value;
+            }
+
+            remainder = tempRemainder;
+            return coinCount;
         }
     }
 }

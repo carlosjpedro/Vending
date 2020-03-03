@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Vending.Contracts.Exceptions;
+using Vending.Contracts.Interfaces;
 using Vending.Models;
 using Vending.Services;
 

@@ -12,7 +12,7 @@
     <form asp-action="Select">
         @foreach (var product in Model.Products)
         {
-            <div class="row">
+            <div class="row mt-1">
                 <input type="hidden" name="productId" value="@product.Id" />
                 <input type="hidden" name="workflowStepId" value="@Model.WorkflowStepId" />
                 <div class="col-6">
@@ -26,13 +26,17 @@
                 </div>
             </div>
         }
-        @if (Model.ErrorMessage != null)
-        {
-            <div class="row">
-                <div class="col-12"><span class="alert alert-danger">@Model.ErrorMessage</span></div>
+        <div class="row mt-2">
+            <div class="col-9">
+                @if (Model.ErrorMessage != null)
+                {
+                    <span class="alert alert-danger">@Model.ErrorMessage</span>
+                }
+                else
+                {
+                    <span>&nbsp;</span>
+                }
             </div>
-        }
-        <div class="row">
             <div class="col-3">
                 <button class="btn btn-danger" value="Cancel" asp-action="Cancel" asp-route-stepId="@Model.WorkflowStepId">Cancel</button>
             </div>

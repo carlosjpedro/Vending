@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-6">
                 <input type="hidden" asp-for="@Model.Currencies[i].Value" />
-                <span>@Model.Currencies[i].Value€</span>
+                <span> @((Model.Currencies[i].Value/100m).ToString("0.00"))€</span>
             </div>
             <div class="col-6">
                 <input type="number" asp-for="@Model.Currencies[i].Count" class="form-control" />
